@@ -1,1 +1,24 @@
 
+After running segmentBeads_v0_6.m in MATLAB, the GUI will open and you can start your analysis. A standard anaylsis session consist of the following steps:
+
+* Under File/Open Folder a file explorer will open, in which you can select the path where your image data (.tiff) is stored
+
+* All the .tiff files available in the folder will be shown in the lower left box, where you can select which one you can analyze. By clicking one on the list, the central Z-slice will be shown in the first plotting window. 
+
+* Using the four scrolls (frame, position x, position y and length cutout) you can look for the desired bead in your stack, mark its center and an approximate region of interest for the analysis.
+
+* You will have to make sure the parameters on the left side are appropriate for your analysis: voxel size (meaning x and y), voxel size z (depth) and the Young Modulus of your material.
+
+* In case your resolution is not satisfactory, you could interpolate the stack up to order 4, which would help in the surface recognition and for visualization purposes.
+
+* The value of the other detection parameters (clipping level, peak intensity and open-close radius) are standard and have been proven to work in many different image qualities and types, both for light-sheet and spinning disk microscopy. However, you could fine tune them in case you have an extreme intensity profile or you encounter some difficulties during the analysis.
+
+* The current parameters of every bead you have marked will be saved by clicking on "Retain current cutout box". This allows a batch processing, where you save the position of several beads even from different .tiff files, and you run the analysis for all of them when clicking "Segment beads".
+
+* In case you images need to be deconvolved, you will have to upload the corresponding Point Spread Function with "Load PSF". In this case, you can save the bead parameters using the "Retain & Deconvolve cutout box" button.
+
+* Once the segmentation is complete for all beads, you can explore the results in the second plotting window and take a look at the detected surfaces.
+
+* By clicking on "Calculate Force-Dipoles Analitically", the corresponding tension will be calculated and the direction of the compression force dipole will be shown overlapped on the original image.
+
+* All the data generated during the analysis will be saved in an automatically created folder in the origin path. There you can find the resulting .tiff files for the segmentation, the fitted spherical harmonic volume and the binary raw data, as well as a .mat structure will all the intermediate parameters.
