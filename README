@@ -1,7 +1,9 @@
 
 After running segmentBeads_v0_6.m in MATLAB, the GUI will open and you can start your analysis. A standard anaylsis session consist of the following steps:
 
-* Under File/Open Folder a file explorer will open, in which you can select the path where your image data (.tiff) is stored
+* Under File/Open Folder a file explorer will open, in which you can select the path where your image data (.tiff) is stored. An example tiff stack is provided in: 
+Example_TIFF/FilteredBead1.tif
+
 
 * All the .tiff files available in the folder will be shown in the lower left box, where you can select which one you can analyze. By clicking one on the list, the central Z-slice will be shown in the first plotting window. 
 
